@@ -131,7 +131,8 @@ function writeFiles() {
     const className = this.entityClass;
     const entityName = this.entityInstance;
     const entityAngularName = this.entityAngularName;
-    utils.addEntityToMenu(this, this.entityFileName, this.entityTranslationKeyMenu, className);
+    //暂时不自动生成Menu-junwei.tang
+    //utils.addEntityToMenu(this, this.entityFileName, this.entityTranslationKeyMenu, className);
 
     // Add entity paths to routing system
     utils.addEntityToRouterImport(this, entityAngularName, this.entityFileName, this.entityFolderName);
