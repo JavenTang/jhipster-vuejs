@@ -23,7 +23,7 @@ const utils = require('../utils');
 const CLIENT_TEST_SRC_DIR = constants.CLIENT_TEST_SRC_DIR;
 const VUE_DIR = 'src/main/webapp/app/';
 const CLIENT_VUE_TEMPLATES_DIR = 'vue';
-
+const VUE_TEMPLATE = 'entities';
 /**
 * The default is to use a file path string. It implies use of the template method.
 * For any other config an object { file:.., method:.., template:.. } can be used
@@ -35,31 +35,31 @@ const vueFiles = {
             path: VUE_DIR,
             templates: [
                 {
-                    file: 'entities/entity-details.vue',
+                    file: VUE_TEMPLATE+'/entity-details.vue',
                     renameTo: generator => `entities/${generator.entityFolderName}/${generator.entityFileName}-details.vue`
                 },
                 {
-                    file: 'entities/entity-details.component.ts',
+                    file: VUE_TEMPLATE+'/entity-details.component.ts',
                     renameTo: generator => `entities/${generator.entityFolderName}/${generator.entityFileName}-details.component.ts`
                 },
                 {
-                    file: 'entities/entity-update.vue',
+                    file: VUE_TEMPLATE+'/entity-update.vue',
                     renameTo: generator => `entities/${generator.entityFolderName}/${generator.entityFileName}-update.vue`
                 },
                 {
-                    file: 'entities/entity-update.component.ts',
+                    file: VUE_TEMPLATE+'/entity-update.component.ts',
                     renameTo: generator => `entities/${generator.entityFolderName}/${generator.entityFileName}-update.component.ts`
                 },
                 {
-                    file: 'entities/entity.vue',
+                    file: VUE_TEMPLATE+'/entity.vue',
                     renameTo: generator => `entities/${generator.entityFolderName}/${generator.entityFileName}.vue`
                 },
                 {
-                    file: 'entities/entity.component.ts',
+                    file: VUE_TEMPLATE+'/entity.component.ts',
                     renameTo: generator => `entities/${generator.entityFolderName}/${generator.entityFileName}.component.ts`
                 },
                 {
-                    file: 'entities/entity.service.ts',
+                    file: VUE_TEMPLATE+'/entity.service.ts',
                     renameTo: generator => `entities/${generator.entityFolderName}/${generator.entityFileName}.service.ts`
                 },
                 {
